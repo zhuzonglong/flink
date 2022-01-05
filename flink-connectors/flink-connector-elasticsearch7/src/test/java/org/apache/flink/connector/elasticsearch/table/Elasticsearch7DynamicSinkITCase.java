@@ -86,6 +86,7 @@ public class Elasticsearch7DynamicSinkITCase extends ElasticsearchDynamicSinkBas
 
     @Override
     String getConnectorSql(String index) {
+        
         return String.format("'%s'='%s',\n", "connector", "elasticsearch-7")
                 + String.format(
                         "'%s'='%s',\n", ElasticsearchConnectorOptions.INDEX_OPTION.key(), index)
